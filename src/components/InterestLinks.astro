@@ -1,0 +1,54 @@
+---
+interface Link {
+    title: string;
+    href: string;
+    description: string;
+    icon: string;
+}
+
+const links: Link[] = [
+    {
+        title: "Análisis de Ventas Cali",
+        href: "https://github.com/andreadeavila48/analisis-ventas-cali",
+        description: "Proyecto de análisis de datos de ventas usando Python y técnicas de data science",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>`
+    },
+    {
+        title: "Diseño BD Banco Digital",
+        href: "https://www.canva.com/design/DAGY0hZ1RK8/Q66Czb2BRw1w_y-_RSoeQg/edit",
+        description: "Diseño de Base de Datos para Gestión Integral de Clientes y Finanzas en una Aplicación de Banco Digital",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>`
+    },
+    {
+        title: "Plan RRSS MIPS Colombia",
+        href: "https://www.canva.com/design/DAGWm0ZWMwU/Yf-VoVkpXRoBxdkHUohXRg/edit",
+        description: "Estrategia y planificación de redes sociales para MIPS Colombia",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+        </svg>`
+    }
+];
+---
+
+<div class="space-y-3 sm:space-y-4 mt-6 sm:mt-8">
+    {links.map(link => (
+        <a 
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group block p-3 sm:p-4 bg-white/10 backdrop-blur-md rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] border border-white/10"
+        >
+            <div class="flex items-center space-x-3">
+                <div class="text-white/80 group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                    <Fragment set:html={link.icon} />
+                </div>
+                <div class="min-w-0 flex-1">
+                    <h3 class="text-base sm:text-lg font-medium text-white group-hover:text-white/90 truncate">{link.title}</h3>
+                    <p class="text-xs sm:text-sm text-white/70 group-hover:text-white/80 transition-colors duration-300 line-clamp-2">{link.description}</p>
+                </div>
+            </div>
+        </a>
+    ))}
+</div>

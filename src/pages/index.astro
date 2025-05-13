@@ -1,11 +1,67 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Profile from "../components/Profile.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import InterestLinks from "../components/InterestLinks.astro";
+import PhotoProfile from "../assets/foto-perfil.webp";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Metadata para SEO
+const title = "Oriana de Avila | Analista de Datos y Estratega Digital";
+const description = "Experta en análisis de datos, diseño de bases de datos y estrategias digitales. Descubre mis proyectos en análisis de ventas, arquitectura de datos y planificación de redes sociales.";
+
+const jsonLD = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Oriana de Avila",
+    "jobTitle": "Analista de Datos",
+    "url": Astro.url.href,
+    "sameAs": [
+        "https://github.com/andreadeavila48",
+        "https://www.linkedin.com/in/oriana-de-avila"
+    ],
+    "image": "/foto-perfil.webp",
+    "description": description,
+    "knowsAbout": [
+        "Análisis de Datos",
+        "Python",
+        "SQL",
+        "Bases de Datos",
+        "Estrategia Digital",
+        "Redes Sociales"
+    ]
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={title} description={description}>
+    <main class="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
+        <div class="w-full max-w-[340px] sm:max-w-[400px] md:max-w-[440px] bg-black/20 backdrop-blur-xl rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 border border-white/10">
+            <Profile 
+                name="Oriana de Avila"
+                role="Analista de Datos"
+                imageUrl={PhotoProfile}
+            />
+            <p class="text-sm sm:text-base text-white/80 text-center mt-3 sm:mt-4 mb-6 sm:mb-8 font-light">
+                Transformo datos en decisiones inteligentes que generan impacto real.
+            </p>
+            <SocialLinks />
+            <InterestLinks />
+        </div>
+    </main>
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLD)} />
 </Layout>
+
+<style>
+    main {
+        perspective: 1000px;
+    }
+    
+    div {
+        transform-style: preserve-3d;
+        transition: transform 0.3s ease;
+    }
+    
+    div:hover {
+        transform: translateZ(20px);
+    }
+</style>
