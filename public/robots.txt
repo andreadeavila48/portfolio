@@ -1,0 +1,11 @@
+# oadeavila.live sitemap
+
+User-agent: *
+Allow: /
+
+# Disallow search-result pages, tags, etc
+Disallow: /search
+Disallow: /tags
+
+# Sitemap file
+Sitemap: https://oadeavila.live/sitemap.xml

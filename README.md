@@ -1,48 +1,104 @@
-# Astro Starter Kit: Basics
+# Portfolio de Oriana de Avila - Bio Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Portfolio Preview](src/assets/foto-perfil.webp)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Sobre el Proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Esta es una bio page profesional creada con Astro y Tailwind CSS. Diseñada como un punto central para conectar con mi trabajo y proyectos como Analista de Datos.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+### ✨ Características
 
-## 🚀 Project Structure
+- **Diseño moderno y atractivo** con animaciones y efectos visuales
+- **Totalmente responsivo** para una experiencia perfecta en todos los dispositivos
+- **Optimizado para SEO** con metadatos, schema.org y Open Graph
+- **Componentes reutilizables** para facilitar mantenimiento y expansión
+- **Integración con Tailwind 4** para estilos avanzados y modernos
+- **Rendimiento optimizado** gracias a Astro 5 y sus capacidades de hidratación parcial
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📋 Proyectos Destacados
+
+El portfolio muestra mis proyectos más relevantes:
+
+- **Análisis de Ventas de Cali**: Proyecto de análisis de datos utilizando Python y técnicas avanzadas de data science
+- **Diseño de Base de Datos para Banco Digital**: Arquitectura completa para la gestión integral de clientes y finanzas
+- **Plan de Redes Sociales MIPS Colombia**: Estrategia digital y planificación de contenidos
+
+## 🛠️ Tecnologías Utilizadas
+
+- [Astro 5](https://astro.build/) - Framework web de alto rendimiento
+- [Tailwind CSS 4](https://tailwindcss.com/) - Framework CSS utility-first
+- HTML5, CSS3, JavaScript
+- SVG para iconos y elementos visuales
+
+## 🚀 Estructura del Proyecto
 
 ```text
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── assets/
+│   │   └── foto-perfil.webp
+│   ├── components/
+│   │   ├── InterestLinks.astro    # Links a proyectos
+│   │   ├── Profile.astro          # Componente de perfil con foto
+│   │   ├── SocialButton.astro     # Botón para redes sociales
+│   │   └── SocialLinks.astro      # Sección de enlaces sociales
 │   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   │   └── Layout.astro           # Layout principal con SEO
+│   ├── pages/
+│   │   └── index.astro            # Página principal
+│   └── styles/
+│       └── global.css             # Estilos globales
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## ⚙️ Instalación y Ejecución
 
-## 🧞 Commands
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/portfolio.git
+   cd portfolio
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. Ejecuta el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-## 👀 Want to learn more?
+4. Para construir el sitio para producción:
+   ```bash
+   npm run build
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📝 SEO y Rendimiento
+
+El sitio está optimizado para motores de búsqueda con:
+
+- Metadatos completos y descriptivos
+- Schema.org para Rich Snippets
+- Open Graph para compartir en redes sociales
+- Estructura semántica y accesible
+- Rendimiento optimizado con Astro 5
+
+## 🧞 Comandos Disponibles
+
+| Comando                 | Acción                                           |
+| :---------------------- | :----------------------------------------------- |
+| `npm install`           | Instala dependencias                             |
+| `npm run dev`           | Inicia servidor local en `localhost:4321`        |
+| `npm run build`         | Construye el sitio para producción en `./dist/`  |
+| `npm run preview`       | Previsualiza la build antes de desplegar         |
+
+## 📄 Licencia
+
+[MIT](LICENSE)
+
+---
+
+Creado con ❤️ por [Oriana de Avila](https://github.com/andreadeavila48)

@@ -1,0 +1,18 @@
+{
+  "name": "Oriana de Avila | Portfolio",
+  "short_name": "Oriana Portfolio",
+  "description": "Portafolio profesional de Oriana de Avila, Analista de Datos",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#010033",
+  "theme_color": "#460043",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -10,6 +10,10 @@ const {
     title = "Oriana de Avila | Analista de Datos",
     description = "Portafolio profesional de Oriana de Avila, Analista de Datos especializada en análisis de ventas, diseño de bases de datos y estrategias de redes sociales."
 } = Astro.props;
+
+// URLs absolutas para las imágenes
+const baseUrl = 'https://oadeavila.live';
+const profileImage = `${baseUrl}/foto-perfil.webp`;
 ---
 
 <!doctype html>
@@ -19,6 +23,10 @@ const {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		
+		 <!-- PWA Manifest -->
+		<link rel="manifest" href="/manifest.json">
+		<meta name="theme-color" content="#460043">
 		
 		<!-- SEO Metatags -->
 		<title>{title}</title>
@@ -30,13 +38,15 @@ const {
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/foto-perfil.webp" />
+		<meta property="og:image" content={profileImage} />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:site_name" content="Oriana de Avila | Portafolio" />
 		
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content="/foto-perfil.webp" />
+		<meta name="twitter:image" content={profileImage} />
 		
 		<!-- Otros metatags importantes -->
 		<link rel="canonical" href={Astro.url.href} />

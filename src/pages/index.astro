@@ -9,17 +9,21 @@ import PhotoProfile from "../assets/foto-perfil.webp";
 const title = "Oriana de Avila | Analista de Datos y Estratega Digital";
 const description = "Experta en análisis de datos, diseño de bases de datos y estrategias digitales. Descubre mis proyectos en análisis de ventas, arquitectura de datos y planificación de redes sociales.";
 
+// URLs absolutas
+const baseUrl = 'https://oadeavila.live';
+const profileImageUrl = `${baseUrl}/foto-perfil.webp`;
+
 const jsonLD = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Oriana de Avila",
     "jobTitle": "Analista de Datos",
-    "url": Astro.url.href,
+    "url": baseUrl,
     "sameAs": [
         "https://github.com/andreadeavila48",
         "https://www.linkedin.com/in/oriana-de-avila"
     ],
-    "image": "/foto-perfil.webp",
+    "image": profileImageUrl,
     "description": description,
     "knowsAbout": [
         "Análisis de Datos",
